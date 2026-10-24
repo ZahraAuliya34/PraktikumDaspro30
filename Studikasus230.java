@@ -35,6 +35,28 @@ public class Studikasus230 {
                 System.out.println("bukan juara 1,2 dan 3");
             }
                 
+        } else if (jenis.equalsIgnoreCase("PKM")) {
+            System.out.print("Status pendanaan (1 = lolos, 0 = tidak lolos) : ");
+            statusPendanaan = sc.nextInt();
+            System.out.print("Jumlah dokumen yang diupload (0-4) : ");
+            jumlahDoc = sc.nextInt();
+
+            if (statusPendanaan == 1) {
+                if (jumlahDoc == 4) {
+                    System.out.println("Dana diberikan");
+                } else {
+                    System.out.println("Dana tidak diberikan");
+                    System.out.println("Dokumen tidak lengkap, kurang " + (4 - jumlahDoc) + " dokumen");
+                }
+            } else {
+                System.out.println("Dana tidak diberikan");
+                System.out.println("PKM tidak lolos pendanaan");
+            }
+
+        } else if (jenis.equalsIgnoreCase("LAINNYA")) {
+            System.out.println("Dana tidak diberikan");
+            System.out.println("Kegiatan kategori Lainnya tidak memperoleh dana penghargaan");
+
         } else {
             System.out.println("jenis kegiatan tidak valid");
         }
