@@ -4,7 +4,7 @@ public class Studikasus230 {
         Scanner sc = new Scanner(System.in);
         //deklarasi variable
         String nama, jenis;
-        int jumlahDoc, juara, statusPendanaan;
+        int jumlahDoc, juara = 0, statusPendanaan = 0;
         //input data
         System.out.println("---Validasi Prestasi---");
         System.out.println("Nama Mahasiswa : ");
@@ -27,7 +27,7 @@ public class Studikasus230 {
                 } else {
                     statusPendanaan = 2;
                     System.out.println("Dana tidak diberikan");
-                    System.out.println("jumlah dokumen kurang dari 4");
+                    System.out.println("jumlah dokumen kurang dari 4 yaitu "  + (4 - jumlahDoc) + " dokumen");
                 }
             } else {
                 statusPendanaan = 3;
@@ -60,7 +60,11 @@ public class Studikasus230 {
         } else {
             System.out.println("jenis kegiatan tidak valid");
         }
-
+        System.out.println("=== HASIL VALIDASI ===");
+        System.out.println("Nama: " + nama);
+        System.out.println("Kegiatan: " + jenis);
+        System.out.println("Juara: " + juara);
+        System.out.println("Status pendanaan: " + statusPendanaan);
         sc.close();
     }
 }
